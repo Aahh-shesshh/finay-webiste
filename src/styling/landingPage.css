@@ -1,0 +1,456 @@
+.landing-page {
+  width: 100%;
+  height: fit-content;
+  background: #181a20;
+  display: flex;
+  flex-direction: row;
+}
+.left-nav {
+  width: 235px;
+  height: 625px;
+  padding-top: 30px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(180deg, #151518 0%, rgba(45, 43, 56, 0) 100%);
+}
+.col1 {
+  width: 20%;
+}
+
+.left-nav p {
+  width: fit-content;
+  height: 19px;
+
+  margin-top: 5px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.home-icon {
+  width: 25px;
+  height: 25px;
+
+  /* color: rgba(255, 255, 255, 0.6); */
+}
+
+.col2 {
+  width: 80%;
+}
+
+.left-nav hr {
+  width: 139px;
+  height: 0px;
+  border: 1px solid #3c3c3c;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.explore {
+  width: 900px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-left: 20px;
+  padding-top: 30px;
+  background: linear-gradient(180deg, #151518 0%, rgba(45, 43, 56, 0) 100%);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.explore h1 {
+  width: 390px;
+  height: 100px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 140%;
+  /* or 67px */
+
+  color: #ffffff;
+}
+
+h1 span {
+  color: rgba(255, 130, 0, 1);
+}
+
+.explore p {
+  width: 335px;
+  height: 46px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+.Explore-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  width: 175px;
+  height: 45px;
+
+  background: #ff8200;
+  border-radius: 30px;
+}
+
+.card-songs {
+  width: 244.71px;
+  height: 305.67px;
+  background: #232229;
+  border-radius: 6.68139px;
+  padding-top: 5px;
+  z-index: 9999;
+}
+.card-songs img {
+  width: 217.98px;
+  height: 141.98px;
+  border-radius: 5px;
+}
+.card-songs h6 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.0442px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.card-songs h5 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.3628px;
+  line-height: 16px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.Buy {
+  margin-top: 10px;
+  width: 135.3px;
+  height: 33.41px;
+  left: 948.73px;
+  top: 375.05px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  color: #ffffff;
+  border: 0.835173px solid #d2d5da;
+  border-radius: 5.01104px;
+}
+
+.card-songs2 {
+  position: absolute;
+  transform: rotate(-15deg);
+  right: 350px;
+  top: 105px;
+  width: 244.71px;
+  height: 305.67px;
+  background: #232229;
+  border-radius: 6.68139px;
+  padding-top: 5px;
+}
+.card-songs2 img {
+  width: 217.98px;
+  height: 141.98px;
+  border-radius: 5px;
+}
+.card-songs2 h6 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.0442px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.card-songs2 h5 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.3628px;
+  line-height: 16px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+.card-songs3 {
+  position: absolute;
+  right: 150px;
+  top: 105px;
+  transform: rotate(15deg);
+  width: 244.71px;
+  height: 305.67px;
+  background: #232229;
+  border-radius: 6.68139px;
+  padding-top: 5px;
+}
+.card-songs3 img {
+  width: 217.98px;
+  height: 141.98px;
+  border-radius: 5px;
+}
+.card-songs3 h6 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.0442px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.card-songs3 h5 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.3628px;
+  line-height: 16px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.discover {
+  width: 900px;
+  height: 180px;
+  padding-top: 10px;
+  left: 250px;
+  top: 545px;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffdcb7;
+  border-radius: 8px;
+}
+
+.discover img {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+}
+.discover h5 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #000000;
+}
+
+.discover h6 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  width: 550px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.create-btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* White */
+
+  color: #ffffff;
+  margin-top: 20px;
+  width: 140px;
+  height: 48px;
+
+  background: #ff8200;
+  border-radius: 30px;
+}
+.download {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  width: 900px;
+  height: fit-content;
+  padding-bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 28px;
+}
+
+.download h1 {
+  padding: 10px 20px;
+  width: 420px;
+  height: fit-content;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  /* or 67px */
+
+  color: #ffffff;
+}
+
+.appstore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 175.95px;
+  height: 64px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+.appstore img {
+  width: 40px;
+  border-radius: 10px;
+  height: 40px;
+}
+.appstore h5 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+.apple2 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  gap: 10px;
+  /* left: 250px; */
+  /* top: 1091px; */
+  bottom: 0%;
+
+  background: rgba(24, 26, 32, 0.44);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 0px 0px 4px 4px;
+}
+.apple3 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 450px;
+  height: 100px;
+  gap: 10px;
+  /* left: 250px; */
+  /* top: 1091px; */
+  bottom: 0%;
+
+  background: rgba(24, 26, 32, 0.44);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 0px 0px 4px 4px;
+}
+
+.tommorow {
+  margin-top: 20px;
+  margin-left: 100px;
+  width: 144px;
+  height: 32px;
+  left: 551px;
+  top: 3334px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff8200;
+  border-radius: 16px;
+  font-family: "Work Sans",sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+
+  display: flex;
+  align-items: center;
+
+  color: #ff8200;
+}
+
+.supporters-overlay {
+  position: relative;
+  padding: 10px;
+}
+
+.supporters-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 5px solid transparent;
+  background: linear-gradient(180deg, #00ff82 0%, #ff8200 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}

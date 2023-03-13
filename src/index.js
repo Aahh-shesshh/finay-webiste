@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import '../src/styling/index.css';
+import '../src/styling/Profile.css';
+import '../src/styling/settings.css';
+import '../src/styling/Login.css';
+import '../src/styling/landingPage.css';
+import '../src/styling/SignUpPageStyling/App.css';
+import App from './App.js';
+import './styling/SignUpPageStyling/style.css';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  
     <App />
-  </React.StrictMode>
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

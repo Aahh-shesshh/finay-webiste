@@ -1,0 +1,152 @@
+.cards-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.first-card {
+  width: 150px;
+  position: relative;
+  height: 170px;
+  background: rgba(24, 26, 32, 0.05);
+  border: 2px solid #ff8200;
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+  padding-top: 10px;
+  /* display: flex; */
+  /* justify-content: center; */
+  border-radius: 8px;
+}
+
+.second-card {
+  width: 150px;
+  height: 170px;
+  padding-top: 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+}
+.logo-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  left: 23px;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+}
+
+.text-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-div h3 {
+  position: relative;
+  left: -10px;
+  width: 100px;
+  height: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 25px */
+}
+.text-div p {
+  position: relative;
+  right: 8px;
+  width: 102px;
+  height: 60px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+}
+.headphone {
+  color: #ff8200;
+}
+
+/* ..........Enter code CSSSs............................  */
+
+.code-div {
+  position: relative;
+  right: 40px;
+}
+.otp-number-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.otp-number-div input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  /* stroke */
+  color: white;
+  border: 1px solid #515151;
+  border-radius: 8px;
+}
+.resend-div p {
+  width: 206px;
+  height: 22px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 140%;
+  /* or 22px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #d5d4d8;
+  margin-top: 20px;
+}
+.resend-div span {
+  padding-left: 10px;
+  color: #ff8200;
+}
+.verify-button-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.verify-btn {
+  display: flex;
+  position: relative;
+  right:50px ;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 12px 10px 46px;
+  gap: 8px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  line-height: 10px;
+  width: 125px;
+  height: 35px;
+  background: #ff8200;
+  border-radius: 30px;
+}

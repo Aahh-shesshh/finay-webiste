@@ -1,0 +1,478 @@
+.login-page {
+  width: 100%;
+  height: 600px;
+
+  /* Body color */
+  overflow: hidden;
+  background: #181a20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page h3 {
+  width: 331px;
+  height: 46px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 125%;
+  /* or 60px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.login-page p {
+  width: 350px;
+  height: 22px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 60;
+  font-size: 12px;
+  line-height: 140%;
+  margin-bottom: 13px;
+  /* or 22px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #d5d4d8;
+}
+.login-page span {
+  margin-left: 30px;
+  width: 200px;
+  height: 19px;
+  cursor: pointer;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  /* or 22px */
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ff8200;
+  margin-left: 10px;
+}
+
+.input-div span {
+  width: 131px; 
+  height: 19px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  /* or 22px */
+  position: relative;
+  left: 145px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ff8200;
+}
+.login-button-div {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+}
+.LoginButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 28px;
+  gap: 8px;
+
+  width: 250px;
+  height: 40px;
+
+  background: #ff8200;
+  border-radius: 30px;
+
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: center;
+  color: #341b00;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.top-div-login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 50px;
+}
+.login-page hr {
+  width: 65px;
+  height: 0px;
+  left: 876px;
+  top: 731px;
+  border: 1px solid #454343;
+}
+.login-page h6 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 140%;
+  /* or 22px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #d5d4d8;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.login-footer {
+  position: relative;
+  left: 30px;
+}
+
+/* forget password....===> */
+
+.login-page-fp {
+  width: 100%;
+  height: 600px;
+
+  /* Body color */
+
+  background: #181a20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page-fp h3 {
+  width: 300px;
+  height: 42px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 42px */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.login-page-fp p {
+  width: 300px;
+  height: 48px;
+
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  /* or 24px */
+
+  text-align: center;
+
+  color: #d5d4d8;
+}
+.Send-Mail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 25px;
+  gap: 8px;
+
+  width: 250px;
+  height: 37px;
+
+  background: #ff8200;
+  border-radius: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #341b00;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.purple-blur {
+  position: absolute;
+  width: 282.54px;
+  height: 287.17px;
+  left: 387px;
+  top: -31px;
+
+  background: #ad00ff;
+  opacity: 0.15;
+  filter: blur(109.707px);
+}
+.orange-blur1 {
+  position: absolute;
+  width: 282.54px;
+  height: 287.17px;
+  left: 0px;
+  top: 568px;
+
+  background: #ff8200;
+  opacity: 0.15;
+  filter: blur(109.707px);
+}
+.orange-blur2 {
+  position: absolute;
+  width: 282.54px;
+  height: 287.17px;
+  left: 861px;
+  top: -64px;
+
+  background: #ff8200;
+  opacity: 0.15;
+  filter: blur(109.707px);
+}
+
+/* .....==> CheckMail... */
+.login-page-mail {
+  width: 100%;
+  height: 600px;
+
+  /* Body color */
+
+  background: #181a20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-page-mail h3 {
+  width: 300px;
+  height: 42px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 60px;
+  /* identical to box height, or 42px */
+  position: relative;
+  left: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.login-page-mail p {
+  width: 350px;
+  height: 48px;
+
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  /* or 24px */
+
+  text-align: center;
+
+  color: #d5d4d8;
+}
+
+.check-mail {
+  margin-top: 20px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 25px;
+  gap: 8px;
+
+  width: 250px;
+  height: 37px;
+
+  background: #ff8200;
+  border-radius: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #341b00;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.login-page-mail hr {
+  width: 395px;
+  height: 0px;
+  margin-top: 10px;
+  left: 522px;
+  top: 465px;
+
+  border: 1px solid #303030;
+}
+.login-page-mail span {
+  width: 92px;
+  height: 22px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+
+  color: #ff8200;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* reset password ==>..... */
+
+.login-page-reset {
+  width: 100%;
+  height: 600px;
+
+  /* Body color */
+
+  background: #181a20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page-reset h3 {
+  width: 360px;
+  height: 42px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  /* identical to box height, or 42px */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.login-page-reset p {
+  width: 250px;
+  height: 48px;
+  position: relative;
+  left: 40px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  /* or 24px */
+
+  text-align: center;
+
+  color: #d5d4d8;
+}
+.input-div p {
+  position: relative;
+  width: 224px;
+  height: 17px;
+
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 130%;
+  /* identical to box height, or 17px */
+
+  color: #9e9e9e;
+}
+.Reset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 30px;
+  gap: 8px;
+
+  width: 250px;
+  height: 37px;
+
+  background: #ff8200;
+  border-radius: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #341b00;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.right-mark {
+  top: 21.11%;
+  bottom: 11.37%;
+  border-radius: 50%;
+  background: #23222d;
+  border: 4px solid #38b300;
+  width: 60.77px;
+  height: 60.77px;
+}
+.tick {
+  width: 50px;
+  height: 50px;
+  color: #38b300;
+}
+.shadow {
+  position: relative;
+  width: 111.92px;
+  height: 12.69px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}

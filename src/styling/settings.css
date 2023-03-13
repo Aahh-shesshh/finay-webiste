@@ -1,0 +1,720 @@
+.settings {
+  width: 100%;
+  min-height: 1732px;
+  max-height: fit-content;
+  overflow: hidden;
+
+  /* Body color */
+
+  background: #181a20;
+}
+
+.main-setting {
+  margin-left: 120px;
+  margin-top: 60px;
+  /* border: 1px white solid; */
+  width: 80%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+}
+.left-const-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+.changing-divs {
+  display: flex;
+  width: 70%;
+  /* border: 1px orange dotted; */
+}
+.left-const-div h3 {
+  width: 129px;
+  height: 40px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 125%;
+  /* identical to box height, or 40px */
+  /* margin-bottom: 20px; */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.settings-options {
+  width: 240px;
+  height: 40px;
+  display: flex;
+  /* background: #ff8200; */
+  border-radius: 4px;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.settings-options h5 {
+  width: 150px;
+  height: 25px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 25px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+}
+
+.account h4 {
+  margin-bottom: 10px;
+  width: 99px;
+  height: 25px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  /* or 34px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+input {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 14px 20px 15px;
+  gap: 10px;
+
+  width: 300px;
+  height: fit-content;
+
+  /* bg field */
+
+  background: rgba(255, 255, 255, 0.05);
+  /* stroke */
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #9e9e9e;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border: 1px solid #515151;
+  border-radius: 10px;
+}
+
+.Save-btn {
+  padding: 10px 20px;
+
+  width: 175px;
+  height: 48px;
+
+  background: #ff8200;
+  border-radius: 50px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #000000;
+  margin-top: 40px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.account h5 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.p {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 25px;
+  line-height: 140%;
+  /* or 22px */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ff2d2d;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.acc-switch {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* align-items: center; */
+  position: absolute;
+  width: 450px;
+  height: fit-content;
+  left: 449px;
+  top: 244px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  background: rgba(31, 34, 42, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+}
+.acc-switch h4 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  /* identical to box height, or 34px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+.acc-switch h5 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #ffffff;
+}
+.acc-switch hr {
+  width: 300px;
+  border: 1px solid #515151;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px 20px;
+  gap: 4px;
+
+  width: 300px;
+  height: 96px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.information h5 {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  /* or 22px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.information p {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  /* or 20px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.delete-btn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 36px 11px;
+  gap: 10px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 140%;
+  /* or 22px */
+
+  letter-spacing: 0.2px;
+
+  color: #ff8200;
+  width: 130px;
+  height: 45px;
+
+  border: 1px solid #ff8200;
+  border-radius: 30px;
+}
+.deactivate-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 36px 11px;
+  gap: 10px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 140%;
+  /* or 22px */
+
+  letter-spacing: 0.2px;
+
+  /* Bg[day]/ White-100 */
+
+  color: #ffffff;
+  width: 130px;
+  height: 45px;
+
+  background: #ff8200;
+  border: 1px solid #ff8200;
+  border-radius: 30px;
+}
+.wallet {
+  box-sizing: border-box;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 123px;
+  /* bg field */
+  cursor: grab;
+  background: rgba(255, 255, 255, 0.05);
+  /* border: 1px solid #ff8200; */
+  border-radius: 10px;
+}
+.wallet img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+.wallet p {
+  /* width: 122px; */
+  height: 17px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  /* or 28px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #9e9e9e;
+}
+
+.social_media h4 {
+  width: 156px;
+  height: 25px;
+  margin-bottom: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  /* or 34px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.privacy h4 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  /* or 34px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.privacy h5 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 140%;
+  /* or 34px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.name {
+  width: 150px;
+  height: 42px;
+
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  /* color: red; */
+}
+
+.audience {
+  width: 415px;
+  gap: 10px;
+  padding: 20px 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: #2a2b2f;
+  border-radius: 10px;
+}
+.downarrow {
+  color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.audience hr {
+  border: 1px solid #515151;
+  width: 380px;
+}
+
+.privacy p {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  width: 300px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.checkbox-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.checkbox-div input {
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 30px;
+
+  border: 1px solid #ff8200;
+  border-radius: 2px;
+}
+.checkbox:checked {
+  background-color: orange;
+}
+
+.blocked {
+  /* padding: 8px 8px; */
+  gap: 10px;
+
+  width: 90px;
+  height: 36px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  justify-content: center;
+  color: #ea3b56;
+
+  /* Inside auto layout */
+
+  border: 1px solid rgba(234, 67, 53, 0.6);
+  border-radius: 80px;
+
+  /* Inside auto layout */
+  margin-top: 8px;
+  margin-left: 100px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+}
+.audience span {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* or 25px */
+  width: 150px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.audience h6 {
+  width: 310px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 140%;
+  /* or 17px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 16px;
+  /* gap: 236px; */
+
+  width: 300px;
+  height: 42px;
+
+  /* bg field */
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  align-self: stretch;
+
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+}
+
+.rm-contacts {
+  padding: 12px 36px 11px;
+  gap: 10px;
+
+  width: 340px;
+  height: 52px;
+
+  background: #ff8200;
+  border: 1px solid #ff8200;
+  border-radius: 30px;
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 140%;
+  /* or 22px */
+
+  letter-spacing: 0.2px;
+
+  /* Bg[day]/ White-100 */
+
+  color: #ffffff;
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+}
+.notification h5 {
+  width: fit-content;
+  height: 25px;
+
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 25px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+.notification h4 {
+  width: 200px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  /* or 34px */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+.notification p {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.notification input {
+  box-sizing: border-box;
+
+  border: 1px solid #ff8200;
+  border-radius: 2px;
+}
+
+.input-radio input {
+  border: 1px solid #ff8200;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+.input-radio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ff8200;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%; 
+}
