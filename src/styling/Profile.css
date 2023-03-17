@@ -298,7 +298,7 @@
 /* ==========>   Feed  ========>  */
 
 .feed {
-  height: 800px;
+  /* height: 800px; */
   background-color: #181a20;
 
   overflow: hidden;
@@ -511,13 +511,10 @@
   padding-left: 450px;
 }
 .posts {
-  /* margin-left: 450px; */
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   width: fit-content;
-  /* border: 1px solid orange; */
-  /* overflow: scroll; */
 }
 
 .status-div {

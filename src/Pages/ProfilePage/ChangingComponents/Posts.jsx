@@ -6,7 +6,7 @@ import { BsShare, BsChat, BsFillHeartFill, BsFlag } from "react-icons/bs";
 
 const Posts = () => {
   return (
-    <div className="posts">
+    <div className="posts min-h-max">
 
       <div className="status-div">
         <CgProfile className="profile-pic"></CgProfile>

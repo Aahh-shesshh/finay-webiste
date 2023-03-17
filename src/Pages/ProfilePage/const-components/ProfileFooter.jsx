@@ -8,7 +8,7 @@ import { AiFillGithub } from "react-icons/ai";
 
 const ProfileFooter = () => {
   return (
-    <div className="main-footer">
+    <div className="main-footer ">
       <div className="profile-footer">
         <div>
           <div className="footer-logo">
