@@ -1,5 +1,5 @@
 import React from "react";
-import ConstFooter from "../../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../../styling/const-leftpage/ConstFooter";
 import { BsLinkedin } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";

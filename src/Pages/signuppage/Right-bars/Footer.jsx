@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
-      <Link to="/LoginPage">
+      <Link to="/">
         <h3>
           Already have an account?<span>Login</span>
           <AiOutlineArrowRight style={{ color: "#FF8200" }} />

@@ -1,5 +1,5 @@
 import React from "react";
-import LeftBar from "./const-leftpage/LeftBar";
+import LeftBar from "../../styling/const-leftpage/LeftBar";
 import EnterCode from "./Right-bars/EnterCode";
 import CreateAccout from "./Right-bars/CreateAccoutFirst";
 import Footer from "./Right-bars/Footer";

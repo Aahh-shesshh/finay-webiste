@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 // import Footer from "../signuppage/Right-bars/Footer";
 
 const ForgetPassword = () => {
@@ -18,7 +18,7 @@ const ForgetPassword = () => {
         <input placeholder="Email"></input>
       </div>
       <div className="mt-[20px]">
-        <Link to="/LoginPage/CheckMail">
+        <Link to="/CheckMail">
           <Button className="Send-Mail" buttonText="Send Mail" />
         </Link>
       </div>

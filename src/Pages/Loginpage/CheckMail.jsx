@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 
 const CheckMail = () => {
   return (
@@ -13,7 +13,7 @@ const CheckMail = () => {
           the email.
         </p>
         <hr />
-        <Link to="/LoginPage/ResetPassword">
+        <Link to="/ResetPassword">
           <Button buttonText="ResetPassword" className="check-mail" />
         </Link>
 

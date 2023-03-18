@@ -23,6 +23,11 @@ const TopNav = () => {
     dispatch(incrementByOne())
     return setSelectedOption(1);
   };
+
+  const clearLocalStorage = () => {
+    localStorage.clear("email");
+    localStorage.clear("password");
+  }
   const handleProfileClick = () => {
     setSelectedOption(0)
     return  setShowModal((prev) => !prev);
@@ -126,7 +131,7 @@ const TopNav = () => {
                   className="bottom-settings"
                   onClick={() => setSelectedOption(3)}
                 >
-                  <Link to="/LoginPage" className="flex items-center justify-center gap-6">
+                  <Link to="/" onClick={clearLocalStorage} className="flex items-center justify-center gap-6">
                     <AiOutlineLogout
                       style={{
                         color:

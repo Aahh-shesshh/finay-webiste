@@ -35,7 +35,7 @@ const Congratulations = (props) => {
         </p>
       </div>
       <div>
-        <Link to="/LoginPage">
+        <Link to="/">
           <Button className="dashboard-btn" buttonText="Go to Login Page" />
         </Link>
       </div>

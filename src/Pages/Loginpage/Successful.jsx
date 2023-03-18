@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 import { TiTick } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const Successful = () => {
         </p>
       </div>
       <div className="mt-[20px]">
-        <Link to="/LoginPage">
+        <Link to="/">
           <Button buttonText="Continue" className="Reset" />
         </Link>
       </div>

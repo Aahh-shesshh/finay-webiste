@@ -6,6 +6,7 @@ const Button = (props) => {
       <button
         className={props.className}
         onClick={props.handleClick}
+        type={props.type}
       >
         {props.buttonText}
         {props.isLoading ? "Loading" : null}

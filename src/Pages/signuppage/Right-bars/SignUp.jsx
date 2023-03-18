@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Button from "../../../components/buttons/Button";
 import { decrement } from "../../../Store/Slices/NextButtonSlice";
 import { increment } from "../../../Store/Slices/SignUpBtnSlice";
 
-
 const SignUp = () => {
   const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const emailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const passwordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const confirmPass = e.target.elements.confirmedpass.value;
+    if (password.trim() === "") {
+      alert("Please enter a password");
+    } else if (password !== confirmPass) {
+      alert("Passwords do not match");
+    } else {
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      dispatch(increment())
+    }
+  };
 
   return (
     <div className="login-div">
@@ -17,22 +38,35 @@ const SignUp = () => {
           collecting NFTs on Finay.
         </p>
       </div>
-      <div className="input-div">
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password"></input>
-        <input type="text" placeholder="Confirm Password" />
-      </div>
-      <div className="buttons-div">
-        <Button 
-        className="prev-btn"
-         buttonText="Previous"
-         handleClick={()=> dispatch(decrement())}
-         
-         />
-        <Button className="signup-btn" buttonText="Sign Up" 
-        handleClick={()=> dispatch(increment())}
-        />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="input-div">
+          <input
+            type="email"
+            value={email}
+            placeholder="Email"
+            onChange={emailChange}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={passwordChange}
+          ></input>
+          <input
+            type="password"
+            name="confirmedpass"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <div className="buttons-div">
+          <Button
+            className="prev-btn"
+            buttonText="Previous"
+            handleClick={() => dispatch(decrement())}
+          />
+          <Button className="signup-btn" buttonText="Sign Up" type="submit" />
+        </div>
+      </form>
       <div className="flex flex-row items-center content-center mt-5">
         <hr />
         <h6>or continue with</h6>

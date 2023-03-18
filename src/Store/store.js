@@ -6,6 +6,7 @@ import  settingsSlice  from "./Slices/SettingsSlice";
 import counterSignUpSlice from "./Slices/SignUpBtnSlice";
 import verifySlice from "./Slices/VerifySlice";
 
+
 export const store = configureStore({
   reducer: {
     next: counterNextBtnSlice,

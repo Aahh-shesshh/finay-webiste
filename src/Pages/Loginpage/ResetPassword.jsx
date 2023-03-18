@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 
 const ResetPassword = () => {
   return (
@@ -15,7 +15,7 @@ const ResetPassword = () => {
         <p>It should be more than 6+ characters</p>
       </div>
       <div className="mt-[30px]">
-        <Link to="/LoginPage/Successful">
+        <Link to="/Successful">
           <Button className="Reset" buttonText="Reset" />
         </Link>
       </div>

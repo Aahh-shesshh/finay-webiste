@@ -1,54 +1,95 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/buttons/Button";
 import { setZeroNextBtn } from "../../Store/Slices/NextButtonSlice";
 import { setZeroSignUp } from "../../Store/Slices/SignUpBtnSlice";
 import { setZero } from "../../Store/Slices/VerifySlice";
-import ConstFooter from "../signuppage/const-leftpage/ConstFooter";
+import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 // import Footer from "../signuppage/Right-bars/Footer";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassChange = (e) => {
+    setPass(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const loggedEmail = localStorage.getItem("email");
+    const loggedPassword = localStorage.getItem("password");
+    if (email === loggedEmail && loggedPassword === pass) {
+      localStorage.setItem("user", true);
+      navigate("/ProfilePage");
+    } else {
+      alert("Account details doest match");
+    }
+  };
 
   const back = () => {
     return (
       dispatch(setZeroNextBtn()), dispatch(setZero()), dispatch(setZeroSignUp())
     );
   };
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      navigate("/ProfilePage");
+    }
+  }, []);
+
   return (
     <div className="login-page">
       <div className="top-div-login">
         <h3>Welcome Back,</h3>
         <div className="flex flex-row">
-          <Link to="/" onClick={back}>
+          <Link to="/SignUpPage" onClick={back}>
             <p>
               Don't have account?{" "}
-            
-                {" "}
-                <span>
-                  Signup <AiOutlineArrowRight className="AiOutlineArrowRight" />
-                </span>
-              
+              <span>
+                Signup <AiOutlineArrowRight className="AiOutlineArrowRight" />
+              </span>
             </p>
           </Link>
         </div>
       </div>
-      <div className="input-div">
-        <input placeholder="Email"></input>
-        <input placeholder="Password"></input>
-        <Link to="/LoginPage/ForgetPassword">
+      <form onSubmit={handleSubmit}>
+        <div className="input-div">
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Enter Email"
+          ></input>
+          <input
+            type="password"
+            value={pass}
+            onChange={handlePassChange}
+            placeholder="Password"
+          ></input>
+          <Link to="/ForgetPassword">
+            {" "}
+            <span>Forgot Password?</span>
+          </Link>
+        </div>
+        <div className="login-button-div">
           {" "}
-          <span>Forgot Password?</span>
-        </Link>
-      </div>
-      <div className="login-button-div">
-        <Link to="/ProfilePage">
-          {" "}
-          <Button buttonText="Login" className="LoginButton" />
-        </Link>
-      </div>
+          {/* <Link to={}> */}
+          <Button buttonText="Login" type={"submit"} className="LoginButton" />
+          {/* </Link> */}
+        </div>
+      </form>
+
       <div className="flex flex-row items-center content-center mt-5">
         <hr />
         <h6>or continue with</h6>
