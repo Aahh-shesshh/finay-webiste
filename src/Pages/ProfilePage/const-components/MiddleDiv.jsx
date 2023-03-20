@@ -63,11 +63,11 @@ const MiddleDiv = () => {
         <div>
           <div 
           onClick={() => dispatch(incrementByOne())}
-          className="items-center flex flex-row ml-32  gap-3  pt-12 cursor-pointer">
+          className="items-center relative flex flex-row ml-32  gap-3  pt-12 cursor-pointer">
             <AiOutlineArrowLeft    className="text-white" />
             <h4 className="text-white">Back</h4>
           </div>
-          <div className="rounded-full bg-orange-500 w-[40px] h-[40px] items-center left-[1200px] top-[40px] relative justify-center flex">
+          <div className="rounded-full bg-orange-500 w-[40px] h-[40px] items-center left-[1000px] top-[40px] relative justify-center flex">
             <Button buttonText ={<BsCamera />} />
             </div>
         </div>
