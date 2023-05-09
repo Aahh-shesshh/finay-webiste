@@ -8,12 +8,16 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
 
   const emailChange = (e) => {
     setEmail(e.target.value);
   };
   const passwordChange = (e) => {
     setPassword(e.target.value);
+  };
+  const userNameChange = (e) => {
+    setUsername(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +29,8 @@ const SignUp = () => {
     } else {
       localStorage.setItem("email", email);
       localStorage.setItem("password", password);
+      localStorage.setItem("Username", username);
+      
       dispatch(increment())
     }
   };
@@ -56,6 +62,13 @@ const SignUp = () => {
             type="password"
             name="confirmedpass"
             placeholder="Confirm Password"
+          />
+           <input
+           value={username}
+            type="text"
+            onChange={userNameChange}
+            name="username"
+            placeholder="Username"
           />
         </div>
         <div className="buttons-div">

@@ -7,17 +7,17 @@ import { setZeroNextBtn } from "../../Store/Slices/NextButtonSlice";
 import { setZeroSignUp } from "../../Store/Slices/SignUpBtnSlice";
 import { setZero } from "../../Store/Slices/VerifySlice";
 import ConstFooter from "../../styling/const-leftpage/ConstFooter";
-// import Footer from "../signuppage/Right-bars/Footer";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
+ 
+  const [username , setUsername] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handleUserChange = (e) => {
+    setUsername(e.target.value);
   };
   const handlePassChange = (e) => {
     setPass(e.target.value);
@@ -25,10 +25,10 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const loggedEmail = localStorage.getItem("email");
+    const loggedUsername = localStorage.getItem("Username");
     const loggedPassword = localStorage.getItem("password");
-    if (email === loggedEmail && loggedPassword === pass) {
-      localStorage.setItem("user", true);
+    if (loggedUsername === username && loggedPassword === pass) {
+      localStorage.setItem("status", true);
       navigate("/ProfilePage");
     } else {
       alert("Account details doest match");
@@ -42,8 +42,8 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
+    const loggedStatus = localStorage.getItem("status");
+    if (loggedStatus) {
       navigate("/ProfilePage");
     }
   }, []);
@@ -66,10 +66,10 @@ const LoginPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="input-div">
           <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Enter Email"
+            type="text"
+            value={username}
+            onChange={handleUserChange}
+            placeholder="Username"
           ></input>
           <input
             type="password"
@@ -108,8 +108,7 @@ const LoginPage = () => {
         <ConstFooter />
       </div>
       <div className="purple-blur"></div>
-      {/* <div className="orange-blur1"></div> */}
-      {/* <div className="orange-blur2"></div> */}
+     
     </div>
   );
 };

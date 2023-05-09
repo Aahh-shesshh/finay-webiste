@@ -25,8 +25,7 @@ const TopNav = () => {
   };
 
   const clearLocalStorage = () => {
-    localStorage.clear("email");
-    localStorage.clear("password");
+    localStorage.removeItem("status")
   }
   const handleProfileClick = () => {
     setSelectedOption(0)
@@ -181,7 +180,7 @@ const TopNav = () => {
       >
         <CgProfile className="profile" />
 
-        <h4>Hi, Ashish</h4>
+        <h4>Hi,{localStorage.getItem("Username")} </h4>
       </div>
     </div>
   );

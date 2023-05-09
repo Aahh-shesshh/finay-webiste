@@ -542,14 +542,14 @@
   color: #ffffff;
   margin-right: 5px;
 }
-.status-div p {
+.status-div input {
   font-family: "Urbanist", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 140%;
   /* identical to box height, or 20px */
-
+  border-style: none;
   display: flex;
   align-items: center;
   letter-spacing: 0.2px;
@@ -557,7 +557,7 @@
   color: rgba(255, 255, 255, 0.4);
 
   /* Inside auto layout */
-
+  background: transparent;
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -633,7 +633,7 @@
 
 .hello p {
   width: 330px;
-  height: 48px;
+
 
   font-family: "Work Sans", sans-serif;
   font-style: normal;
@@ -658,9 +658,14 @@
   height: 0px;
   border: 1px solid #605f5f;
 }
-.heart {
+.active-icon {
   color: white;
-  background: transparent;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.notactive-icon {
+ cursor: pointer;
+  
   margin-top: 2px;
 }
 .chat1 {

@@ -8,10 +8,12 @@ const Account = () => {
   const [deleteAcc, setDeleteAcc] = useState(false);
 
   const handleClickDeactivate = () => {
-    return setDeleteAcc(false), setShowModal(true);
+    setDeleteAcc(false)
+    return  setShowModal(true);
   };
   const handleClickDelete = () => {
-    return setDeleteAcc(true), setShowModal(false);
+    setDeleteAcc(true)
+    return  setShowModal(false);
   };
 
 
