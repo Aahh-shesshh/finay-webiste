@@ -4,7 +4,7 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 
 const EditProfile = () => {
   return (
-    <div className="edit-profile">
+    <div className="edit-profile pb-5">
       <div className="col-1">
         <h1>Edit Profile</h1>
         <Button buttonText="Profile" className="profile-btn" />

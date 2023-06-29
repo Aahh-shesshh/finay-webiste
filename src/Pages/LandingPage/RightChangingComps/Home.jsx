@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import supportors from "../../../Data/Supportors";
 import { FaHeadphones } from "react-icons/fa";
-
+import swipperData from "../../../Data/swiperData";
 const Home = () => {
   return (
     <div className="home-page">
@@ -73,121 +73,33 @@ const Home = () => {
           modules={[Navigation, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album5.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album5.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
+          {swipperData.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
+                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
+                    {" "}
+                    <FaHeadphones size={34} />
+                  </div>
+                  <div className="w-full h-full overflow-hidden">
+                    <img
+                      alt=""
+                      className="w-full h-full"
+                      src={data.image}
+                    ></img>
+                  </div>
+                  <div className="apple2">
+                    <img className="logo" alt="" src={data.image}></img>
+                    <div className="desc">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
+                    <Button className="price" buttonText={data.price} />
+                  </div>
                 </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album4.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album4.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album3.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album3.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album2.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album2.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className="home-slider">
@@ -201,126 +113,42 @@ const Home = () => {
         <Swiper
           // spaceBetween={}
           slidesPerView={3}
-          loop={true}
+          // loop={true}
           navigation={true}
-          modules={[Navigation]}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album5.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album5.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
+          {swipperData.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
+                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
+                    {" "}
+                    <FaHeadphones size={34} />
+                  </div>
+                  <div className="w-full h-full overflow-hidden">
+                    <img
+                      alt=""
+                      className="w-full h-full"
+                      src={data.image}
+                    ></img>
+                  </div>
+                  <div className="apple2">
+                    <img className="logo" alt="" src={data.image}></img>
+                    <div className="desc">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
+                    <Button className="price" buttonText={data.price} />
+                  </div>
                 </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album4.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album4.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album3.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album3.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album2.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album2.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className="download">
@@ -332,17 +160,21 @@ const Home = () => {
           </h1>
           <div className="flex flex-row ml-[20px] gap-[20px]">
             <div className="appstore">
-              <img src="/images/appstore.jpg" alt="asdf"/>
+              <img src="/images/appstore.jpg" alt="asdf" />
               <h5>App store</h5>
             </div>
             <div className="appstore">
-              <img src="/images/playstore.jpg" alt="asfd"/>
+              <img src="/images/playstore.jpg" alt="asfd" />
               <h5>Google play</h5>
             </div>
           </div>
         </div>
         <div>
-          <img className="w-[170px] mt-9 h-[170px]" src="/images/qr.jpg" alt="asdf" />
+          <img
+            className="w-[170px] mt-9 h-[170px]"
+            src="/images/qr.jpg"
+            alt="asdf"
+          />
         </div>
       </div>
       <div>
@@ -380,101 +212,29 @@ const Home = () => {
           modules={[Navigation, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album5.jpg"
-                ></img>
-              </div>
-              <div className="apple3">
-                <img className="logo" alt="" src="/images/album5.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
+          {swipperData.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
+                  <div className="w-full h-full overflow-hidden">
+                    <img
+                      alt=""
+                      className="w-full h-full"
+                      src={data.image}
+                    ></img>
+                  </div>
+                  <div className="apple3">
+                    <img className="logo" alt="" src={data.image}></img>
+                    <div className="desc">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
+                    <div className="tommorow">{data.date}</div>
+                  </div>
                 </div>
-                <div className="tommorow">Tommorow</div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album4.jpg"
-                ></img>
-              </div>
-              <div className="apple3">
-                <img className="logo" alt="" src="/images/album4.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <div className="tommorow">Tommorow</div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album3.jpg"
-                ></img>
-              </div>
-              <div className="apple3">
-                <img className="logo" alt="" src="/images/album3.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <div className="tommorow">Tommorow</div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album2.jpg"
-                ></img>
-              </div>
-              <div className="apple3">
-                <img className="logo" alt="" src="/images/album2.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <div className="tommorow">Tommorow</div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album.jpg"
-                ></img>
-              </div>
-              <div className="apple3">
-                <img className="logo" alt="" src="/images/album.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <div className="tommorow">Tommorow</div>
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className="home-slider">
@@ -497,121 +257,33 @@ const Home = () => {
           modules={[Navigation, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album5.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album5.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
+          {swipperData.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
+                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
+                    {" "}
+                    <FaHeadphones size={34} />
+                  </div>
+                  <div className="w-full h-full overflow-hidden">
+                    <img
+                      alt=""
+                      className="w-full h-full"
+                      src={data.image}
+                    ></img>
+                  </div>
+                  <div className="apple2">
+                    <img className="logo" alt="" src={data.image}></img>
+                    <div className="desc">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
+                    <Button className="price" buttonText={data.price} />
+                  </div>
                 </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album4.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album4.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album3.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album3.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album2.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album2.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-              <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                {" "}
-                <FaHeadphones size={34} />
-              </div>
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  alt=""
-                  className="w-full h-full"
-                  src="/images/album.jpg"
-                ></img>
-              </div>
-              <div className="apple2">
-                <img className="logo" alt="" src="/images/album.jpg"></img>
-                <div className="desc">
-                  <h5>Reo Cargun</h5>
-                  <h4>Frameworks</h4>
-                </div>
-                <Button className="price" buttonText="12.3$" />
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

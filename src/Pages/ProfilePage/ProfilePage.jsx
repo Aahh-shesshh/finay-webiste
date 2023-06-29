@@ -14,7 +14,7 @@ const ProfilePage = () => {
  
  
   return (
-    <div className="profile-page">
+    <div className="profile-page overflowy-hidden">
       <TopNav />
 
       {settingsShow ? (

@@ -1,30 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = false;
-  
-
 
 export const homeBtnSlice = createSlice({
-  name: 'home',
+  name: "home",
   initialState,
   reducers: {
-    incrementByOneHome: (state) => 
-        // Redux Toolkit allows us to write "mutating" logic in reducers. It
-        // doesn't actually mutate the state because it uses the Immer library,
-        // which detects changes to a "draft state" and produces a brand new
-        // immutable state based off those changes
-       state = !state
-  
-      ,
-      decrementByOneHome: (state) => {
-        state = false;
-      },
-  },
-},
+    incrementByOneHome: (state) =>
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      (state = !state),
 
-)
+    decrementByOneHome: (state) => {
+      state = false;
+    },
+  },
+});
 
 // Action creators are generated for each case reducer function
-export const { incrementByOneHome, decrementByOneHome} = homeBtnSlice.actions;
+export const { incrementByOneHome, decrementByOneHome } = homeBtnSlice.actions;
 
 export default homeBtnSlice.reducer;
