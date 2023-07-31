@@ -7,7 +7,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Loading = () => {
-  return (
+  return (  
     <div className="status-text">
       <SkeletonTheme baseColor="#4C4F51" highlightColor="#454343">
         <div className="flex flex-row gap-6">
