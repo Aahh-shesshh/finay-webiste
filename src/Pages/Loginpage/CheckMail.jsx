@@ -1,29 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../../styling/const-leftpage/ConstFooter";
+import ConstFooter from "../const-leftpage/ConstFooter";
 
 const CheckMail = () => {
   return (
-    <div className="login-page-mail">
-      <div>
-        <h3>Check your Mail</h3>
-        <p>
-          We sent a password reset link to Kedina.smith@gmail.com. Please check
-          the email.
-        </p>
-        <hr />
-        <Link to="/ResetPassword">
-          <Button buttonText="ResetPassword" className="check-mail" />
-        </Link>
+    <div className="forget-password-page">
+      <h3>Check your Mail</h3>
+      <p>
+        We sent a password reset link to Kedina.smith@gmail.com. Please check
+        the email.
+      </p>
+      <hr className="w-72 border" />
+      <Link to="/ResetPassword">
+        <Button buttonText="ResetPassword" className="button" />
+      </Link>
+      <p>
+        Didn’t receive the email? <span className="cursor-pointer text-orange-500">Click to resend</span>
+      </p>
 
-        <p className="mt-[30px]">
-          Didn’t receive the email? <span>Click to resend</span>
-        </p>
-      </div>
       <ConstFooter />
       <div className="purple-blur"></div>
-      <div className="orange-blur1"></div>
       <div className="orange-blur2"></div>
     </div>
   );

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Button from "../../../components/buttons/Button";
 import { setZeroNextBtn } from "../../../Store/Slices/NextButtonSlice";
 import { setZeroSignUp } from "../../../Store/Slices/SignUpBtnSlice";
-import { increment, setZero} from "../../../Store/Slices/VerifySlice";
+import { increment, setZero } from "../../../Store/Slices/VerifySlice";
 
 import Congratulations from "../Congratulations";
 
@@ -13,27 +13,26 @@ const EnterCode = () => {
   const [showModal, setShowModal] = React.useState(false);
 
   const handleButtonClick = () => {
-     
-      dispatch(increment());
-      setShowModal(true);
-  
-      // return ()=> {
-      //   clearTimeout(timeout)
-      // }
+    dispatch(increment());
+    setShowModal(true);
+
+    // return ()=> {
+    //   clearTimeout(timeout)
+    // }
   };
 
-
   const back = () => {
-    return(
+    return (
       dispatch(setZeroNextBtn()),
       setShowModal(false),
       dispatch(setZero()),
       dispatch(setZeroSignUp())
-    )
-  }
+    );
+  };
 
   return (
     <div className="code-div">
+      {showModal && <Congratulations goBack={back} />}
       <div className="login-top">
         <h3>Enter your code</h3>
         <p>
@@ -55,13 +54,12 @@ const EnterCode = () => {
           </a>
         </p>
       </div>
-      {showModal ? <Congratulations goBack={back} /> : null}
+
       <div className="verify-button-div">
         <Button
           className="verify-btn"
           buttonText="Verify"
           handleClick={handleButtonClick}
-         
         />
       </div>
     </div>

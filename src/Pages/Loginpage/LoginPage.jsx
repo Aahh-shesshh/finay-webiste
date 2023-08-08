@@ -6,14 +6,13 @@ import Button from "../../components/buttons/Button";
 import { setZeroNextBtn } from "../../Store/Slices/NextButtonSlice";
 import { setZeroSignUp } from "../../Store/Slices/SignUpBtnSlice";
 import { setZero } from "../../Store/Slices/VerifySlice";
-import ConstFooter from "../../styling/const-leftpage/ConstFooter";
+import ConstFooter from "../const-leftpage/ConstFooter";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
- 
-  const [username , setUsername] = useState("");
+  const [username, setUsername] = useState("");
   const [pass, setPass] = useState("");
 
   const handleUserChange = (e) => {
@@ -49,15 +48,15 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <div className="login-page">
-      <div className="top-div-login">
+    <div className="login-page flex flex-col gap-2 items-center justify-center  h-[100vh] ">
+      <div className="">
         <h3>Welcome Back,</h3>
-        <div className="flex flex-row">
+        <div className="">
           <Link to="/SignUpPage" onClick={back}>
-            <p>
-              Don't have account?{" "}
+            <p className="flex flex-row gap-6">
+              Don't have account?
               <span>
-                Signup <AiOutlineArrowRight className="AiOutlineArrowRight" />
+                Signup <AiOutlineArrowRight />
               </span>
             </p>
           </Link>
@@ -78,16 +77,11 @@ const LoginPage = () => {
             placeholder="Password"
           ></input>
           <Link to="/ForgetPassword">
-            {" "}
             <span>Forgot Password?</span>
           </Link>
         </div>
-        <div className="login-button-div">
-          {" "}
-          {/* <Link to={}> */}
-          <Button buttonText="Login" type={"submit"} className="LoginButton" />
-          {/* </Link> */}
-        </div>
+        <br />
+        <Button buttonText="Login" type={"submit"} className="LoginButton" />
       </form>
 
       <div className="flex flex-row items-center content-center mt-5">
@@ -108,7 +102,6 @@ const LoginPage = () => {
         <ConstFooter />
       </div>
       <div className="purple-blur"></div>
-     
     </div>
   );
 };

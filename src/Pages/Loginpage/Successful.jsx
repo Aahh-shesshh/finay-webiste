@@ -1,12 +1,12 @@
 import React from "react";
 import Button from "../../components/buttons/Button";
-import ConstFooter from "../../styling/const-leftpage/ConstFooter";
 import { TiTick } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import ConstFooter from "../const-leftpage/ConstFooter";
 
 const Successful = () => {
   return (
-    <div className="login-page-mail">
+    <div className="forget-password-page">
       <div className="right-mark">
         <TiTick className="tick" />
       </div>
@@ -20,15 +20,12 @@ const Successful = () => {
       </div>
       <div className="mt-[20px]">
         <Link to="/">
-          <Button buttonText="Continue" className="Reset" />
+          <Button buttonText="Continue" className="button" />
         </Link>
       </div>
-      <div className="relative left-[65px] mt-[80px]">
         <ConstFooter />
-      </div>
 
       <div className="purple-blur"></div>
-      <div className="orange-blur1"></div>
       <div className="orange-blur2"></div>
     </div>
   );

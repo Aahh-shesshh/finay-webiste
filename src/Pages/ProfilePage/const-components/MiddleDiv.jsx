@@ -72,7 +72,7 @@ const MiddleDiv = () => {
             </div>
         </div>
       ) : (
-        <div>
+        <div className="flex flex-row gap-2">
           <Button
             handleClick={() => setShowModal(true)}
             className="backstage-pass-btn"

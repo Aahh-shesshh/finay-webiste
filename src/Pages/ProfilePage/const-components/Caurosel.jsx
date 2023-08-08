@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
-const BackStage = ({ children }) => {
+const Caurosel = ({ children }) => {
   const demoRef = useRef(null);
   if (!demoRef.current) {
     demoRef.current = document.createElement("div");
@@ -16,4 +16,4 @@ const BackStage = ({ children }) => {
   return createPortal(<div>{children}</div>, demoRef.current);
 };
 
-export default BackStage;
+export default Caurosel;

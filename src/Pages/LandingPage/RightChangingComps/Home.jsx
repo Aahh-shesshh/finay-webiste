@@ -1,16 +1,18 @@
 import React from "react";
 import Button from "../../../components/buttons/Button";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import supportors from "../../../Data/Supportors";
-import { FaHeadphones } from "react-icons/fa";
-import swipperData from "../../../Data/swiperData";
+// import {} from "";
+import WhatsHotSwiper from "../swipers/WhatsHotSwiper";
+import PopularCollection from "../swipers/PopularCollection";
+import UpcomingEvents from "../swipers/UpcomingEvents";
+import TopSelling from "../swipers/TopSelling";
+
 const Home = () => {
   return (
-    <div className="home-page">
-      <div className="explore">
+    <div className="home-page px-10">
+      <div className="explore items-center justify-between pl-8 pr-28 py-4">
         <div className="flex flex-col gap-5">
           <h1>
             All the best Music NFT on <span>Finay</span>
@@ -53,105 +55,10 @@ const Home = () => {
           <Button buttonText="Create" className="create-btn" />
         </div>
       </div>
-      <div className="home-slider">
-        <div className="flex flex-row items-center justify-evenly gap-[700px]">
-          <h3 className="text-white text-4xl mb-8">What's hot</h3>
-          <span className="cursor-pointer text-orange-500 underline-offset-2">
-            See all
-          </span>
-        </div>
 
-        <Swiper
-          // spaceBetween={}
-          slidesPerView={3}
-          // loop={true}
-          navigation={true}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          {swipperData.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                    {" "}
-                    <FaHeadphones size={34} />
-                  </div>
-                  <div className="w-full h-full overflow-hidden">
-                    <img
-                      alt=""
-                      className="w-full h-full"
-                      src={data.image}
-                    ></img>
-                  </div>
-                  <div className="apple2">
-                    <img className="logo" alt="" src={data.image}></img>
-                    <div className="desc">
-                      <h5>{data.title}</h5>
-                      <h4>{data.sub_title}</h4>
-                    </div>
-                    <Button className="price" buttonText={data.price} />
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className="home-slider">
-        <div className="flex flex-row items-center justify-evenly gap-[600px]">
-          <h3 className="text-white text-4xl mb-8">Popular Collection</h3>
-          <span className="cursor-pointer text-orange-500 underline-offset-2">
-            See all
-          </span>
-        </div>
-
-        <Swiper
-          // spaceBetween={}
-          slidesPerView={3}
-          // loop={true}
-          navigation={true}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          {swipperData.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                    {" "}
-                    <FaHeadphones size={34} />
-                  </div>
-                  <div className="w-full h-full overflow-hidden">
-                    <img
-                      alt=""
-                      className="w-full h-full"
-                      src={data.image}
-                    ></img>
-                  </div>
-                  <div className="apple2">
-                    <img className="logo" alt="" src={data.image}></img>
-                    <div className="desc">
-                      <h5>{data.title}</h5>
-                      <h4>{data.sub_title}</h4>
-                    </div>
-                    <Button className="price" buttonText={data.price} />
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className="download">
+      <WhatsHotSwiper />
+      <PopularCollection />
+      <div className="download items-center justify-between px-5">
         <div>
           <h1>
             Download the
@@ -159,11 +66,11 @@ const Home = () => {
             discover drops.
           </h1>
           <div className="flex flex-row ml-[20px] gap-[20px]">
-            <div className="appstore">
+            <div className="flex flex-row items-center justify-center appstore border py-2 px-4 rounded-md">
               <img src="/images/appstore.jpg" alt="asdf" />
               <h5>App store</h5>
             </div>
-            <div className="appstore">
+            <div className="flex flex-row items-center justify-center appstore py-2 px-4 border rounded-md">
               <img src="/images/playstore.jpg" alt="asfd" />
               <h5>Google play</h5>
             </div>
@@ -171,7 +78,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            className="w-[170px] mt-9 h-[170px]"
+            className="w-[170px] rounded-lg mt-9 h-[170px]"
             src="/images/qr.jpg"
             alt="asdf"
           />
@@ -192,100 +99,8 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="home-slider">
-        <div className="flex flex-row items-center justify-evenly gap-[600px]">
-          <h3 className="text-white text-4xl mb-8">Upcoming Events</h3>
-          <span className="cursor-pointer text-orange-500 underline-offset-2">
-            See all
-          </span>
-        </div>
-
-        <Swiper
-          // spaceBetween={}
-          slidesPerView={2}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          // loop={true}
-          navigation={true}
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          {swipperData.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="h-[350px] rounded-lg w-[450px] flex flex-col bg-zinc-800">
-                  <div className="w-full h-full overflow-hidden">
-                    <img
-                      alt=""
-                      className="w-full h-full"
-                      src={data.image}
-                    ></img>
-                  </div>
-                  <div className="apple3">
-                    <img className="logo" alt="" src={data.image}></img>
-                    <div className="desc">
-                      <h5>{data.title}</h5>
-                      <h4>{data.sub_title}</h4>
-                    </div>
-                    <div className="tommorow">{data.date}</div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className="home-slider">
-        <div className="flex flex-row items-center justify-evenly gap-[700px]">
-          <h3 className="text-white text-4xl mb-8">Top Selling</h3>
-          <span className="cursor-pointer text-orange-500 underline-offset-2">
-            See all
-          </span>
-        </div>
-
-        <Swiper
-          // spaceBetween={}
-          slidesPerView={3}
-          // loop={true}
-          navigation={true}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          {swipperData.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
-                  <div className="absolute right-[50px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
-                    {" "}
-                    <FaHeadphones size={34} />
-                  </div>
-                  <div className="w-full h-full overflow-hidden">
-                    <img
-                      alt=""
-                      className="w-full h-full"
-                      src={data.image}
-                    ></img>
-                  </div>
-                  <div className="apple2">
-                    <img className="logo" alt="" src={data.image}></img>
-                    <div className="desc">
-                      <h5>{data.title}</h5>
-                      <h4>{data.sub_title}</h4>
-                    </div>
-                    <Button className="price" buttonText={data.price} />
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
+      <UpcomingEvents />
+      <TopSelling />
     </div>
   );
 };

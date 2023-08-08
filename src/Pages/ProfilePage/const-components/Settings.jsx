@@ -14,9 +14,9 @@ const Settings = () => {
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(1);
 
   return (
-    <div className="settings">
+    <div className="settings px-20 py-6 gap-4">
       <div
-        className="items-center flex flex-row ml-32  gap-3  pt-12 cursor-pointer"
+        className="items-center flex flex-row pb-5  gap-3 cursor-pointer"
         onClick={() => dispatch(setFalse())}
       >
         <AiOutlineArrowLeft className="text-white" />
@@ -86,7 +86,7 @@ const Settings = () => {
             <h5>Notification</h5>
           </div>
         </div>
-        <div className="changing-divs">
+        <div className="changing-divs w-full">
           {selectedOptionIndex === 1 ? (
             <Account />
           ) : selectedOptionIndex === 2 ? (

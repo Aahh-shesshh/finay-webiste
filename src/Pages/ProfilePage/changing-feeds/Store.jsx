@@ -13,8 +13,9 @@ const Store = () => {
       <h3>What's hot</h3>
       <br />
       <Swiper
+        autoplay={true}
         className="mySwiper"
-        slidesPerView={3}
+        slidesPerView={4}
         loop={true}
         navigation={true}
         modules={[Navigation]}
@@ -26,13 +27,23 @@ const Store = () => {
                 <div className="w-[250px] h-[260px] overflow-hidden">
                   <img alt="" className="w-[250px]" src={data.image}></img>
                 </div>
-                <div className="apple">
-                  <img className="logo" alt="" src="/images/album.jpg"></img>
-                  <div className="desc">
-                    <h5>{data.title}</h5>
-                    <h4>{data.sub_title}</h4>
+                <div className="flex flex-row items-center justify-between px-2">
+                  <div className="flex flex-row items-center justify-center gap-2">
+                    <img
+                      className="w-11 h-11 rounded-full"
+                      alt=""
+                      src="/images/album.jpg"
+                    ></img>
+                    <div className="desc flex flex-col">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
                   </div>
-                  <Button className="price" buttonText={data.price} />
+
+                  <Button
+                    className="bg-orange-500 h-6 rounded-md text-xs px-3"
+                    buttonText={data.price}
+                  />
                 </div>
               </div>
             </SwiperSlide>
@@ -45,8 +56,9 @@ const Store = () => {
       <h3>Most Popular</h3>
       <br />
       <Swiper
+        autoplay={true}
         className="mySwiper"
-        slidesPerView={3}
+        slidesPerView={4}
         loop={true}
         navigation={true}
         modules={[Navigation]}
@@ -58,13 +70,23 @@ const Store = () => {
                 <div className="w-[250px] h-[260px] overflow-hidden">
                   <img alt="" className="w-[250px]" src={data.image}></img>
                 </div>
-                <div className="apple">
-                  <img className="logo" alt="" src="/images/album.jpg"></img>
-                  <div className="desc">
-                    <h5>{data.title}</h5>
-                    <h4>{data.sub_title}</h4>
+                <div className="flex flex-row items-center justify-between px-2">
+                  <div className="flex flex-row items-center justify-center gap-2">
+                    <img
+                      className="w-11 h-11 rounded-full"
+                      alt=""
+                      src="/images/album.jpg"
+                    ></img>
+                    <div className="desc flex flex-col">
+                      <h5>{data.title}</h5>
+                      <h4>{data.sub_title}</h4>
+                    </div>
                   </div>
-                  <Button className="price" buttonText={data.price} />
+
+                  <Button
+                    className="bg-orange-500 h-6 rounded-md text-xs px-3"
+                    buttonText={data.price}
+                  />
                 </div>
               </div>
             </SwiperSlide>

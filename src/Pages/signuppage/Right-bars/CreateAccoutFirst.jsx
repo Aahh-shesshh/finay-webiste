@@ -14,7 +14,7 @@ const CreateAccout = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="create-account">
+    <div className="create-account pb-4">
       <div className="top-div">
         <h3>Create Account</h3>
         <p>

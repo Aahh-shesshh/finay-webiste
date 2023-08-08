@@ -8,14 +8,13 @@ const Account = () => {
   const [deleteAcc, setDeleteAcc] = useState(false);
 
   const handleClickDeactivate = () => {
-    setDeleteAcc(false)
-    return  setShowModal(true);
+    setDeleteAcc(false);
+    return setShowModal(true);
   };
   const handleClickDelete = () => {
-    setDeleteAcc(true)
-    return  setShowModal(false);
+    setDeleteAcc(true);
+    return setShowModal(false);
   };
-
 
   const switchAccountModal = () => {
     return (
@@ -40,7 +39,7 @@ const Account = () => {
     return (
       <BackStage>
         <div className="acc-switch">
-          <div className="flex flex-row gap-[80px]">
+          <div className="flex flex-row items-center justify-between">
             <h4>Account Deletion</h4>{" "}
             <ImCross
               className="cross-sign"
@@ -62,7 +61,7 @@ const Account = () => {
               will be permanently deleted.
             </p>
           </div>
-          <div className="flex flex-row gap-[30px]">
+          <div className="flex flex-row items-center justify-between">
             <Button buttonText="Deactivate" className="deactivate-btn" />{" "}
             <Button buttonText="Delete" className="delete-btn" />
           </div>
@@ -76,11 +75,11 @@ const Account = () => {
       {showModal ? <BackStage>{switchAccountModal()}</BackStage> : null}
       {deleteAcc ? <BackStage>{deleteAccount()}</BackStage> : null}
       <h4>Account</h4>
-      <div className="form">
+      <div className="flex flex-row gap-8">
         <div className="flex flex-col gap-3">
           <div className="input-details">
             <p>Name</p>
-            <input placeholder="Name"></input>
+            <input placeholder="Name" className=""></input>
           </div>
           <div className="input-details">
             <p>Email</p>
@@ -102,7 +101,7 @@ const Account = () => {
           </div>
           <div className="input-details">
             <p>Birthday</p>
-            <div className="input">Ashish Khatri</div>
+            <input placeholder=""></input>
           </div>
         </div>
       </div>

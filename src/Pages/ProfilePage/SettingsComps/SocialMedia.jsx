@@ -5,7 +5,7 @@ const SocialMedia = () => {
   return (
     <div className="social_media">
       <h4>Social Media</h4>
-      <div className="form">
+      <div className="form gap-8">
         <div className="flex flex-col gap-3">
           <div className="input-details">
             <p>Instagram</p>

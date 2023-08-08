@@ -1,18 +1,18 @@
 import React from "react";
-import ConstFooter from "../../../styling/const-leftpage/ConstFooter";
 import { BsLinkedin } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
+import ConstFooter from "../../const-leftpage/ConstFooter";
 
 const ProfileFooter = () => {
   return (
-    <div className="main-footer ">
-      <div className="profile-footer">
+    <div className="bg-black flex flex-col py-3 px-8">
+      <div className="profile-footer py-2 w-full flex flex-row items-center justify-between">
         <div>
-          <div className="footer-logo">
-            <div className="icon3"></div>
+          <div className="footer-logo py-1">
+            <div className="icon4 mt-2"></div>
             <div className="icon4"></div>
             <h5>Finay</h5>
           </div>
@@ -22,7 +22,7 @@ const ProfileFooter = () => {
             NFTs
           </p>
         </div>
-        <div className="links">
+        <div className="flex flex-row gap-5 links">
           <a href="akjdhf">
             <h4>Home</h4>
           </a>
@@ -49,23 +49,23 @@ const ProfileFooter = () => {
         <div className="socials">
           <a href="ksd">
             {" "}
-            <BsLinkedin className="handles" />
+            <BsLinkedin color="white" size={23} />
           </a>
           <a href="ksd">
             {" "}
-            <FaDiscord className="handles" />
+            <FaDiscord color="white" size={23} />
           </a>
           <a href="ksd">
             {" "}
-            <BsTwitter className="handles" />{" "}
+            <BsTwitter color="white" size={23} />{" "}
           </a>
           <a href="ksd">
             {" "}
-            <AiFillGithub className="handles" />
+            <AiFillGithub color="white" size={23} />
           </a>
           <a href="ksd">
             {" "}
-            <AiOutlineInstagram className="handles" />{" "}
+            <AiOutlineInstagram color="white" size={23} />{" "}
           </a>
         </div>
       </div>

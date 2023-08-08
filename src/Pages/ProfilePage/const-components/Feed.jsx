@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import About from "../ChangingComponents/About";
-import EditProfile from "../ChangingComponents/EditProfile";
+import About from "../changing-feeds/About";
+import EditProfile from "../changing-feeds/EditProfile";
 // import OfflineFeed from "../ChangingComponents/OfflineFeed";
-import Posts from "../ChangingComponents/Posts";
-import Store from "../ChangingComponents/Store";
+import Posts from "../changing-feeds/Posts";
+import Store from "../changing-feeds/Store";
 import StickyComponent from "./StickyComponent";
 
 const Feed = () => {

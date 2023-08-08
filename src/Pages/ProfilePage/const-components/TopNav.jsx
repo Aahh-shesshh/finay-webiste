@@ -5,12 +5,12 @@ import { FiSettings } from "react-icons/fi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { BiWallet, BiChevronRight } from "react-icons/bi";
-import BackStage from "./Caurosel";
 import { useDispatch } from "react-redux";
 import { incrementByOne } from "../../../Store/Slices/ProfileSlice";
 import { incrementByOneHome } from "../../../Store/Slices/HomeButtonSlice";
 import { setTrue } from "../../../Store/Slices/SettingsSlice";
 import { Link } from "react-router-dom";
+import Caurosel from "./Caurosel";
 
 const TopNav = () => {
   const [showModal, setShowModal] = useState(false);
@@ -20,20 +20,20 @@ const TopNav = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(incrementByOne())
+    dispatch(incrementByOne());
     return setSelectedOption(1);
   };
 
   const clearLocalStorage = () => {
-    localStorage.removeItem("status")
-  }
+    localStorage.removeItem("status");
+  };
   const handleProfileClick = () => {
-    setSelectedOption(0)
-    return  setShowModal((prev) => !prev);
+    setSelectedOption(0);
+    return setShowModal((prev) => !prev);
   };
   const handleSettingsClick = () => {
-    setSelectedOption(2)
-    return  dispatch(setTrue());
+    setSelectedOption(2);
+    return dispatch(setTrue());
   };
 
   const walletSelection = () => {
@@ -56,9 +56,9 @@ const TopNav = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar px-6">
       {showModal ? (
-        <BackStage>
+        <Caurosel>
           <div className="profile-caurosel">
             {showWallet ? (
               <div>{walletSelection()}</div>
@@ -130,7 +130,11 @@ const TopNav = () => {
                   className="bottom-settings"
                   onClick={() => setSelectedOption(3)}
                 >
-                  <Link to="/" onClick={clearLocalStorage} className="flex items-center justify-center gap-6">
+                  <Link
+                    to="/"
+                    onClick={clearLocalStorage}
+                    className="flex items-center justify-center gap-6"
+                  >
                     <AiOutlineLogout
                       style={{
                         color:
@@ -142,45 +146,50 @@ const TopNav = () => {
                       }}
                       className="icons-wallet"
                     />
-                 
-                  <h4
-                    style={{
-                      color:
-                        selectedOption === 3
-                          ? "#FF8200"
-                          : selectedOption === 2
-                          ? "white"
-                          : "white",
-                    }}
-                  >
-                    Sign-out
-                  </h4>
+
+                    <h4
+                      style={{
+                        color:
+                          selectedOption === 3
+                            ? "#FF8200"
+                            : selectedOption === 2
+                            ? "white"
+                            : "white",
+                      }}
+                    >
+                      Sign-out
+                    </h4>
                   </Link>
                 </div>
               </div>
             )}
           </div>
-        </BackStage>
+        </Caurosel>
       ) : null}
-
-      <AiOutlineMenu
-        onClick={() => dispatch(incrementByOneHome())}
-        className="Menu cursor-pointer"
-      />
-      <div className="logo1">
-        <div className="icon1"></div>
-        <div className="icon2"></div>
+      <div className="flex flex-row gap-6 items-center">
+        <AiOutlineMenu
+          color="white"
+          onClick={() => dispatch(incrementByOneHome())}
+          className=" cursor-pointer"
+        />
+        <div className="flex flex-row gap-1">
+          <div className="icon1 mt-1"></div>
+          <div className="icon2"></div>
+        </div>
+        <input placeholder="Search music, artists, events..."></input>
       </div>
-      <input placeholder="Search music, artists, events..."></input>
-      <BsChat className="chat" />
-      <IoIosNotificationsOutline className="bell" />
-      <div
-        onClick={handleProfileClick}
-        className=" cursor-pointer flex flex-row gap-2"
-      >
-        <CgProfile className="profile" />
 
-        <h4>Hi,{localStorage.getItem("Username")} </h4>
+      <div className="flex flex-row gap-4 items-center">
+        <BsChat color="white" />
+        <IoIosNotificationsOutline color="white" size={20} />
+        <div
+          onClick={handleProfileClick}
+          className=" cursor-pointer flex flex-row gap-2"
+        >
+          <CgProfile color="white" size={20} />
+
+          <h4>Hi,{localStorage.getItem("Username")} </h4>
+        </div>
       </div>
     </div>
   );

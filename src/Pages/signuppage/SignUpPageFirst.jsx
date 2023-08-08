@@ -1,5 +1,5 @@
 import React from "react";
-import LeftBar from "../../styling/const-leftpage/LeftBar";
+import LeftBar from "../const-leftpage/LeftBar";
 import EnterCode from "./Right-bars/EnterCode";
 import CreateAccout from "./Right-bars/CreateAccoutFirst";
 import Footer from "./Right-bars/Footer";
@@ -27,7 +27,6 @@ const SignUpPage = () => {
   const nextBtnIndex = useSelector((state) => state.next.value);
   const signupBtnIndex = useSelector((state) => state.signup.value);
   const verifyBtnIndex = useSelector((state) => state.verify.value);
-  console.log(signupBtnIndex);
 
   return (
     <div className="sign-up-container">
@@ -48,7 +47,7 @@ const SignUpPage = () => {
           </div>
           <hr />
           <div
-            className="div-2"
+            className="div-1"
             style={
               nextBtnIndex === 0
                 ? styleForNonSelectedDiv
@@ -61,7 +60,7 @@ const SignUpPage = () => {
           </div>
           <hr />
           <div
-            className="div-3"
+            className="div-1"
             style={
               signupBtnIndex === 0
                 ? styleForNonSelectedDiv

@@ -30,8 +30,8 @@ const SignUp = () => {
       localStorage.setItem("email", email);
       localStorage.setItem("password", password);
       localStorage.setItem("Username", username);
-      
-      dispatch(increment())
+
+      dispatch(increment());
     }
   };
 
@@ -53,6 +53,13 @@ const SignUp = () => {
             onChange={emailChange}
           />
           <input
+            value={username}
+            type="text"
+            onChange={userNameChange}
+            name="username"
+            placeholder="Username"
+          />
+          <input
             type="password"
             placeholder="Password"
             value={password}
@@ -62,13 +69,6 @@ const SignUp = () => {
             type="password"
             name="confirmedpass"
             placeholder="Confirm Password"
-          />
-           <input
-           value={username}
-            type="text"
-            onChange={userNameChange}
-            name="username"
-            placeholder="Username"
           />
         </div>
         <div className="buttons-div">

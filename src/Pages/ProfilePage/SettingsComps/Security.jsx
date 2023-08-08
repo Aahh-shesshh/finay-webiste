@@ -5,7 +5,7 @@ const Security = () => {
   return (
     <div className="account">
       <h4>Security</h4>
-      <div className="form">
+      <div className="form gap-8">
         <div className="flex flex-col gap-3">
           <div className="input-details">
             <p>Current Password</p>

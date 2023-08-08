@@ -1,6 +1,6 @@
 .settings {
   width: 100%;
-  min-height: 1732px;
+  min-height: 100vh;
   max-height: fit-content;
   overflow: hidden;
 
@@ -10,11 +10,8 @@
 }
 
 .main-setting {
-  margin-left: 120px;
-  margin-top: 60px;
   /* border: 1px white solid; */
-  width: 80%;
-  height: 600px;
+
   display: flex;
   flex-direction: row;
 }
@@ -26,11 +23,8 @@
 }
 .changing-divs {
   display: flex;
-  width: 70%;
-  /* border: 1px orange dotted; */
 }
 .left-const-div h3 {
-  width: 129px;
   height: 40px;
   font-family: "Urbanist", sans-serif;
   font-style: normal;
@@ -72,8 +66,7 @@
 
 .account h4 {
   margin-bottom: 10px;
-  width: 99px;
-  height: 25px;
+
   font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -92,14 +85,11 @@ input {
   box-sizing: border-box;
 
   /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  width: 400px;
   padding: 14px 20px 15px;
   gap: 10px;
 
-  width: 300px;
+  /* width: 500px; */
   height: fit-content;
 
   /* bg field */
@@ -192,15 +182,14 @@ input {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* align-items: center; */
+
   position: absolute;
-  width: 450px;
+
   height: fit-content;
   left: 449px;
   top: 244px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
+
+  padding: 20px;
   background: rgba(31, 34, 42, 0.44);
   border: 1px solid rgba(255, 255, 255, 0.31);
   backdrop-filter: blur(25px);
@@ -233,7 +222,7 @@ input {
   color: #ffffff;
 }
 .acc-switch hr {
-  width: 300px;
+  /* width: 300px; */
   border: 1px solid #515151;
 }
 
@@ -244,9 +233,6 @@ input {
   align-items: flex-start;
   padding: 15px 20px;
   gap: 4px;
-
-  width: 300px;
-  height: 96px;
 
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -459,7 +445,6 @@ input {
 }
 
 .audience {
-  width: 415px;
   gap: 10px;
   padding: 20px 20px;
   height: fit-content;
@@ -709,12 +694,12 @@ select {
   height: 20px;
   background-color: transparent;
 }
-.input-radio{
+.input-radio {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 3px solid #ff8200;
   width: 21px;
   height: 21px;
-  border-radius: 50%; 
+  border-radius: 50%;
 }

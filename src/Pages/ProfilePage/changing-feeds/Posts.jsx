@@ -7,14 +7,14 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Loading = () => {
-  return (  
-    <div className="status-text">
+  return (
+    <div className="py-3 px-3" style={{ backgroundColor: "#2a2b2f" }}>
       <SkeletonTheme baseColor="#4C4F51" highlightColor="#454343">
         <div className="flex flex-row gap-6">
           <Skeleton circle width={50} height={50} />
           <Skeleton width={100} height={40} />
         </div>
-        <Skeleton className="ml-[74px]" width={300} height={70} />
+        <Skeleton className="ml-[74px]" width={600} height={70} />
       </SkeletonTheme>
     </div>
   );
@@ -35,34 +35,10 @@ const Posts = () => {
   }, [res.photos]);
 
   return (
-    <div className="posts min-h-max">
+    <div className="posts min-h-[100vh]">
       <div className="status-div">
         <CgProfile className="profile-pic"></CgProfile>
         <input placeholder="What's on your mind?"></input>
-      </div>
-      <div className="status-text">
-        <div className="hello">
-          <CgProfile className="profile-pic-2"></CgProfile>
-          <div>
-            <h4>{localStorage.getItem("Username")}</h4>
-            <h6>10 min ago</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              ullamcorper diam gravida sapien sem elementum amet. Ac in
-              pharetra, scelerisque sed euismod.
-            </p>
-          </div>
-        </div>
-        <hr />
-        <div className="hello">
-          <BsHeart
-            className={activeIconIndex ? "active-icon" : "notactive-icon"}
-            onClick={activeIcon}
-          />
-          <BsChat className="notactive-icon" />
-          <BsShare className="notactive-icon ml-[250px]" />
-          <BsFlag className="notactive-icon" />
-        </div>
       </div>
       <br />
       {posts.length === 0 && (
@@ -72,7 +48,7 @@ const Posts = () => {
       )}
       {posts.map((post, postkey) => {
         return (
-          <div className="status-text" key={postkey}>
+          <div className="post" key={postkey}>
             <div className="hello">
               <CgProfile className="profile-pic-2"></CgProfile>
               <div>
@@ -84,15 +60,19 @@ const Posts = () => {
             <div className="img-div">
               <img src={post.url} alt="post"></img>
             </div>
-            <hr />
-            <div className="hello">
-              <BsHeart
-                className={activeIconIndex ? "active-icon" : "notactive-icon"}
-                onClick={activeIcon}
-              />
-              <BsChat className="notactive-icon" />
-              <BsShare className="notactive-icon ml-[250px]" />
-              <BsFlag className="notactive-icon" />
+            <hr className="w-full" />
+            <div className="flex flex-row items-center justify-between w-full">
+              <div className="flex flex-row items-center gap-2">
+                <BsHeart
+                  className={activeIconIndex ? "active-icon" : "notactive-icon"}
+                  onClick={activeIcon}
+                />
+                <BsChat className="notactive-icon" />
+              </div>
+              <div className="flex flex-row items-center gap-2">
+                <BsShare className="notactive-icon ml-[250px]" />
+                <BsFlag className="notactive-icon" />
+              </div>
             </div>
           </div>
         );

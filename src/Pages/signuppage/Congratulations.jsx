@@ -5,11 +5,7 @@ import Button from "../../components/buttons/Button";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Congratulations = (props) => {
-  
-
   const elRef = useRef(null);
   if (!elRef.current) {
     elRef.current = document.createElement("div");
@@ -21,12 +17,12 @@ const Congratulations = (props) => {
     return () => modalRoot.removeChild(elRef.current);
   }, []);
   return createPortal(
-    <div className="congratulations-div">
+    <div className="congratulations-div h-[100vh]">
       <div className="back-div" onClick={props.goBack}>
         <BiChevronLeft className="BiChevronLeftB" />
         <p>Back</p>
       </div>
-     
+
       <div className="text-div-congratulations flex items-center content-center flex-col">
         <h4>Congratulations!</h4>
         <p>
@@ -40,7 +36,6 @@ const Congratulations = (props) => {
         </Link>
       </div>
       <div>
-      
         <footer className="mt-[30px]">
           © 2022 Finay. All Rights Reserved.
         </footer>
