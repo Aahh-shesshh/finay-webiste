@@ -100,7 +100,7 @@
   height: 300px;
   padding-right: 100px;
   position: relative;
-  padding-bottom:20px ;
+  padding-bottom: 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/public/images/middle.jpg");
@@ -147,24 +147,15 @@
 /* =====> Sticky -bar ======> */
 
 .sticky-bar {
-  position: absolute;
-  right: 100px;
-  width: 250px;
-  height: 330px;
-  left: 100px;
-  top: 250px;
-
-  /* bg non transparent */
-
   background: #2a2b2f;
-  border-radius: 4px;
+  border-radius: 10px;
+  width: 250px;
 }
 .rectangle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 }
 .rectangle img {
   width: 80px;
@@ -172,9 +163,6 @@
   border-radius: 50%;
 }
 .rectangle h3 {
-  width: 200px;
-  margin-top: 10px;
-  height: 30px;
   font-family: "Urbanist", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -191,8 +179,6 @@
   color: #ffffff;
 }
 .rectangle h5 {
-  width: 200px;
-  height: 20px;
   font-family: "Urbanist", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -209,13 +195,11 @@
   color: #ffffff;
 }
 .rectangle p {
-  width: 200px;
-  height: 39px;
-
   font-family: "Urbanist", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
+  width: 150px;
   line-height: 140%;
   /* or 20px */
 
@@ -226,30 +210,20 @@
 }
 .supportors {
   display: flex;
-  width: 200px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 100px;
 }
 
 .supportors h3 {
-  width: 35px;
-  height: 28px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  justify-content: center;
+  
 }
 .supportors p {
-  position: relative;
-  /* left: ; */
-  left: -15px;
-
-  width: 35px;
-  height: 28px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  justify-content: center;
+ 
 }
 .Support {
   display: flex;
@@ -259,8 +233,6 @@
   padding: 12px 36px 11px;
   gap: 10px;
   margin-top: 8px;
-  width: 150px;
-  height: 40px;
 
   background: #ff8200;
   border: 1px solid #ff8200;
@@ -279,9 +251,7 @@
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  
 }
 /* ==========>   Feed  ========>  */
 
@@ -539,7 +509,7 @@
   gap: 10px;
 
   height: fit-content;
-  width: fit-content;
+  max-width: 700px;
   /* bg non transparent */
   margin-top: 12px;
   background: #2a2b2f;
@@ -1175,7 +1145,8 @@
   width: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   padding-top: 25px;
   gap: 30px;
 }
@@ -1267,12 +1238,7 @@
   border: 1px dashed #6b6a6a;
   border-radius: 4px;
 }
-.acc-info {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  right: 150px;
-}
+
 .acc-info h4 {
   width: 241px;
   height: 30px;
@@ -1301,9 +1267,8 @@
   color: #d5d4d8;
 }
 .form {
-  
   display: flex;
-  
+
   flex-direction: row;
 }
 .input {
@@ -1369,8 +1334,7 @@
   flex-grow: 0;
 }
 .update-profile {
-  position: relative;
-  right: 250px;
+ 
   display: flex;
   flex-direction: row;
   justify-content: center;

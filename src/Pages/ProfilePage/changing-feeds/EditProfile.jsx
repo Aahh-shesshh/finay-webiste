@@ -32,7 +32,7 @@ const EditProfile = () => {
             contact you for confirmation.
           </p>
         </div>
-        <div className="form">
+        <div className="form gap-4">
           <div className="flex flex-col gap-3">
             <div className="input-details">
               <p>First Name</p>
@@ -53,6 +53,7 @@ const EditProfile = () => {
               <input placeholder="asiskhatri123@gmail.com"></input>
              
             </div>
+            <Button  buttonText="Update profile" className="update-profile"/> 
           </div>
           <div className="flex flex-col gap-3">
             <div className="input-details">
@@ -68,8 +69,9 @@ const EditProfile = () => {
               <div className="input">Ashish Khatri</div>
             </div>
           </div>
+        
         </div>
-        <Button  buttonText="Update profile" className="update-profile"/>
+       
       </div>
       <div className="blur-4"></div>
             <div className="blur-5"></div>

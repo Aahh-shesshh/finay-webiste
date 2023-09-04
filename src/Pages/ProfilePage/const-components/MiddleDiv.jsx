@@ -15,7 +15,7 @@ const MiddleDiv = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="middle-div">
+    <div className="middle-div relative">
       {showModal ? (
         <BackStage>
           <div className="backstage-caurosel">
@@ -60,14 +60,14 @@ const MiddleDiv = () => {
       ) : null}
 
       {counterProfile ? (
-        <div>
+        <div className="">
           <div 
           onClick={() => dispatch(incrementByOne())}
-          className="items-center relative flex flex-row ml-32  gap-3  pt-12 cursor-pointer">
-            <AiOutlineArrowLeft    className="text-white" />
-            <h4 className="text-white">Back</h4>
+          className="items-center absolute flex flex-row left-10 top-14 gap-3 cursor-pointer">
+            <AiOutlineArrowLeft color="white" size={30} />
+            <h4 className="text-white font-bold text-xl">Go Back</h4>
           </div>
-          <div className="rounded-full bg-orange-500 w-[40px] h-[40px] items-center left-[1000px] top-[40px] relative justify-center flex">
+          <div className="rounded-full bg-orange-500 w-[40px] h-[40px] items-center relative justify-center flex">
             <Button buttonText ={<BsCamera />} />
             </div>
         </div>

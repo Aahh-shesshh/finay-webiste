@@ -1,12 +1,6 @@
 import { RiSettings5Fill } from "react-icons/ri";
-import { AiFillHome } from "react-icons/ai";
 
-import {
-  BsFillPeopleFill,
-  BsDiscord,
-  BsFillCollectionPlayFill,
-} from "react-icons/bs";
-import { MdOutlineExplore, MdStorefront, MdLibraryMusic } from "react-icons/md";
+import { BsDiscord, BsFillCollectionPlayFill } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";

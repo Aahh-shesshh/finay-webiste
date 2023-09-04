@@ -19,7 +19,7 @@ export default function WhatsHotSwiper() {
 
       <Swiper
         // spaceBetween={}
-        slidesPerView={4}
+        slidesPerView={3}
         // loop={true}
         navigation={true}
         autoplay={{

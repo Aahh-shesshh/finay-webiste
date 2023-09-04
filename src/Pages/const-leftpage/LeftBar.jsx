@@ -6,7 +6,7 @@ const LeftBar = () => {
     <div className="left-bar-main">
       <div className="logo-div">
         <BiChevronLeft className="BiChevronLeft"/>
-        <div className="icon1"></div><div className="icon2"></div>
+        <div className="icon1 relative"></div><div className="icon2 absolute bottom-1 left-2"></div>
       </div>
       <div className="leftbar-text-div">
         <h3>

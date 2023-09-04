@@ -14,6 +14,13 @@ const swipperData = [
     date: "21st June",
   },
   {
+    title: "Demo3",
+    sub_title: "Album",
+    price: "$40",
+    image: "/images/album3.jpg",
+    date: "21st June",
+  },
+  {
     title: "Demo4",
     sub_title: "Album",
     price: "$40",

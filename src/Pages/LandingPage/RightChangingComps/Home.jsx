@@ -11,7 +11,7 @@ import TopSelling from "../swipers/TopSelling";
 
 const Home = () => {
   return (
-    <div className="home-page px-10">
+    <div className="px-8 flex flex-col gap-6">
       <div className="explore items-center justify-between pl-8 pr-28 py-4">
         <div className="flex flex-col gap-5">
           <h1>

@@ -11,8 +11,6 @@ const ProfilePage = () => {
   const settingsShow = useSelector((state) => state.settings);
   const homeShow = useSelector((state) => state.home);
 
- 
- 
   return (
     <div className="profile-page overflowy-hidden">
       <TopNav />
@@ -24,7 +22,9 @@ const ProfilePage = () => {
           <MiddleDiv />
           <Feed />
         </>
-      ) : <LandingPage /> }
+      ) : (
+        <LandingPage />
+      )}
 
       <ProfileFooter />
     </div>

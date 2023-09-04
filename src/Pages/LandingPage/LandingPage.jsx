@@ -7,7 +7,6 @@ import sideBarOptionBottom from "../../Data/landing-page-data/sidebar-data-botto
 const LandingPage = () => {
   return (
     <div className="landing-page py-3 w-full">
-      <div className="">
         <div className="left-nav px-11">
           {sideBarOptionTop.map((option, id) => (
             <div
@@ -29,9 +28,8 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
-      </div>
 
-      <div className="col2 w-[1300px]">
+      <div className="w-[80%]">
         {" "}
         <Home />
       </div>

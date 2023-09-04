@@ -3,7 +3,7 @@ import Button from "../../../components/buttons/Button";
 
 const StickyComponent = () => {
   return (
-    <div className="sticky-bar">
+    <div className="sticky-bar absolute top-72 left-16 py-4">
       <div className="rectangle">
         <img src="images/Left.jpg" alt="ia"></img>
         <h3>Ashish Khatri</h3>
@@ -13,7 +13,7 @@ const StickyComponent = () => {
           commod
         </p>
         <div className="supportors">
-          <div>
+          <div className="">
             <h3>423</h3>
             <p>Supporters</p>
           </div>

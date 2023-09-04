@@ -19,8 +19,8 @@ export default function TopSelling() {
 
       <Swiper
         // spaceBetween={}
-        slidesPerView={4}
-        loop={true}
+        slidesPerView={3}
+        // loop={true}
         navigation={true}
         autoplay={{
           delay: 1500,
@@ -29,10 +29,10 @@ export default function TopSelling() {
         modules={[Navigation, Autoplay]}
         className="mySwiper"
       >
-        {swipperData.map((data, index) => {
+        {swipperData.map((data, key) => {
           return (
-            <SwiperSlide key={index}>
-              <div className="h-[350px] rounded-lg w-[300px] flex flex-col bg-zinc-800">
+            <SwiperSlide >
+              <div className="h-[350px] relative rounded-lg w-[300px] flex flex-col bg-zinc-800" key={key}>
                 <div className="absolute right-[20px] p-[10px] border mt-[10px] rounded-lg bg-zinc-500 text-white">
                   {" "}
                   <FaHeadphones size={34} />
